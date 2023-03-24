@@ -9,7 +9,9 @@ const PORT = process.env.PORT || 5000
 
 dbConnect()
 const app = express()
-app.use(cors({origin: ["https://order-delivery-mgmt.onrender.com", "http://localhost:3000"],}))
+app.use(cors({
+    origin: [ "http://localhost:3000", "https://order-delivery-mgmt.onrender.com"]
+    }))
 app.use('/graphql', graphqlHTTP({
     schema,
     graphiql: process.env.NODE_ENV === 'development', //when NODE_ENV is equal to production, graphiql will be set to false.

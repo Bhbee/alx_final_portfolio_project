@@ -6,7 +6,7 @@ import Order from './pages/Orders';
 import NotFound from './pages/NotFound';
 
 const client = new ApolloClient({
-  uri: process.env.backend_uri,
+  uri: "http://localhost:5000/graphql",
   cache: new InMemoryCache(),
 })
 
